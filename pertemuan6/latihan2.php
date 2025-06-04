@@ -75,7 +75,6 @@ $mahasiswa = [
                     "gambar" => "Anita.jpg"
                 ]
             ]
-
 ?>
 
 <!DOCTYPE html>
