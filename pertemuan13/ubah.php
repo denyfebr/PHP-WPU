@@ -41,12 +41,13 @@
 <body>
     <h1>Ubah data mahasiswa</h1>
 
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <ul>
             <li>
                 <label for="nrp">NRP : </label>
                 <input type="text" name="nrp" id="nrp" value="<?= $mhs['nrp']; ?>" required>
                 <input type="hidden" name="id" value="<?= $mhs['id']; ?>">
+                <input type="hidden" name="gambarLama" value="<?= $mhs['gambar']; ?>">
             </li>
             <li>
                 <label for="nama">Nama : </label>
@@ -61,8 +62,9 @@
                 <input type="text" name="jurusan" id="jurusan" value="<?= $mhs['jurusan']; ?>" required>
             </li>
             <li>
-                <label for="gambar">Gambar : </label>
-                <input type="text" name="gambar" id="gambar" value="<?= $mhs['gambar']; ?>">
+                <label for="gambar">Gambar : </label><br>
+                <img src = "img/<?= $mhs['gambar'] ?>" width="100px"><br>
+                <input type="file" name="gambar" id="gambar">
             </li>
             <li>
                 <button type="submit" name="submit">Ubah</button>
